@@ -1,0 +1,275 @@
+:root {
+    --primary: #D4846E;
+    --pri-med: #C0705C;
+    --pri-dark: #9A5A4A;
+    --secondary: 5px 42px;
+  }
+
+body {
+    font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", Arial, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 18px; /* Larger base font size for readability */
+}
+
+header {
+    background-color: var(--primary); /* New Primary Color */
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    border-bottom: 5px solid var(--pri-dark); /* Darker shade of new primary */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+#main-banner-img {
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 1em;
+    background-color: #FFFFFF;
+}
+
+/* Navigation Bar Styles */
+#main-nav {
+    background-color: var(--pri-med); /* Darker terracotta for nav bar */
+    padding: 0;
+    text-align: center; /* Center the list items */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange main items horizontally */
+    justify-content: center; /* Center items if they don't fill width, or if width:100% used, this helps align if wrap occurs */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    width: 100%; /* Make the ul take full width of the nav bar */
+}
+
+#main-nav > ul > li {
+    position: relative; /* For submenu positioning */
+    display: inline-block; /* Keep items inline but allow block properties */
+    flex-grow: 1; /* Allow items to grow and fill available space */
+}
+
+.nav-item-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text and icon within the button */
+    width: 100%; /* Make button take full width of li */
+    font-family: inherit;
+}
+
+.nav-item-button:hover, .nav-item-button:focus {
+    background-color: var(--primary); /* Main terracotta for hover/focus */
+}
+
+.nav-toggle-icon {
+    margin-left: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.nav-item-button[aria-expanded="true"] .nav-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 0;
+    top: 100%; /* Position below the parent button */
+    background-color: #FFC898; /* Light peach background */
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1000;
+    border: 1px solid #EBCFB0; /* Subtle peach border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 0 0 6px 6px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--pri-dark); /* Darker shade of primary for text */
+    font-size: 1em;
+    white-space: nowrap; /* Prevent link text from wrapping */
+}
+
+.submenu li a:hover, .submenu li a:focus {
+    background-color: #FADAB4; /* Slightly darker/richer peach on hover */
+    color: var(--pri-med);
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.static-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.static-section h2 {
+    font-size: 1.8em;
+    color: var(--pri-med); /* Darker terracotta for headings */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#health-tip-container {
+    background-color: #FFF0E1; /* Very light warm peach for tips */
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px dashed var(--primary); /* Main terracotta border */
+}
+
+#health-tip-container h3 {
+    margin-top: 0;
+    color: var(--pri-med); /* Darker terracotta for tip heading */
+    font-size: 1.5em;
+}
+
+#health-tip-text {
+    font-size: 1.2em;
+    color: var(--primary); /* Main terracotta for tip text */
+    min-height: 40px; /* To prevent layout shift */
+    margin-bottom: 15px;
+}
+
+#new-tip-button {
+    background-color: var(--primary); /* Main terracotta button */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#new-tip-button:hover {
+    background-color: var(--pri-med); /* Darker terracotta on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--pri-med);
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    main {
+        padding: 15px;
+        margin: 15px;
+    }
+    .static-section h2, .collapsible-header {
+        font-size: 1.5em;
+    }
+
+    body {
+        font-size: 17px;
+    }
+
+    #main-nav ul {
+        flex-direction: column; /* Stack main nav items vertically */
+    }
+    #main-nav > ul > li {
+        display: block; /* Make li take full width */
+        width: 100%;
+    }
+    .nav-item-button {
+        width: 100%;
+        justify-content: space-between; /* Push icon to the right */
+        box-sizing: border-box;
+    }
+    .submenu {
+        position: static; /* Submenus display inline on mobile */
+        width: 100%;
+        box-shadow: none;
+        border-top: 1px solid #EBCFB0;
+        border-bottom: 1px solid #EBCFB0;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        background-color: #FFF0E1; /* Lighter background for inline submenus */
+    }
+    .submenu li a {
+        padding-left: 40px; /* Indent submenu items */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+    body {
+        font-size: 16px;
+    }
+    #new-tip-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .nav-item-button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}
+
+
