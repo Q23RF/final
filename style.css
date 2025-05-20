@@ -168,7 +168,7 @@ main {
 #health-tip-container h3 {
     margin-top: 0;
     color: var(--pri-med); /* Darker terracotta for tip heading */
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 #health-tip-text {
@@ -221,6 +221,37 @@ th, td {
 th {
     background-color: var(--pri-med);
     color: #fff;
+}
+
+.hide {
+  background-color: var(--pri-med);
+  color: white;
+  cursor: pointer;
+  padding: 0.7em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.active, .hide:hover {
+  background-color: var(--pri-dark);
+}
+
+.hidden {
+  padding: 0 1em;
+  display: none;
+  overflow: hidden;
+  background-color: var(--sec-light);
+  flex-wrap: wrap;
+}
+
+.hidden a {
+    padding: 0.7em 1em;
+    color: var(--pri-dark);
 }
 
 /* Responsive adjustments */

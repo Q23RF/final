@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const submenu = document.getElementById(submenuId);
         const icon = button.querySelector('.nav-toggle-icon');
 
-        // Ensure all submenus are hidden initially
         if (submenu) {
             submenu.style.display = 'none';
         }
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-            // First, close all other submenus
             navItemButtons.forEach(otherButton => {
                 const otherSubmenuId = otherButton.getAttribute('aria-controls');
                 const otherSubmenu = document.getElementById(otherSubmenuId);
@@ -97,4 +95,26 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error("Health tip elements not found!");
     }
+
+    var coll = document.getElementsByClassName("hide");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        if (this.children[1].innerHTML === "＋") {
+        this.children[1].innerHTML = "－";
+        } else {
+        this.children[1].innerHTML = "＋";
+        }
+        var content = this.nextElementSibling;
+        if (content.style.display === "flex") {
+        content.style.display = "none";
+        } else {
+        content.style.display = "flex";
+        }
+    });
+    }
+
+
 });
