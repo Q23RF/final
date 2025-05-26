@@ -208,7 +208,8 @@ footer {
 table {
     border-collapse: collapse;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 table, th, td {
     border: 1px solid #ccc;
@@ -227,6 +228,7 @@ th {
   background-color: var(--pri-med);
   color: white;
   cursor: pointer;
+  margin-bottom: 1em;
   padding: 0.7em;
   width: 100%;
   border: none;
@@ -243,6 +245,7 @@ th {
 
 .hidden {
   padding: 0 1em;
+  margin-bottom: 1em;
   display: none;
   overflow: hidden;
   background-color: var(--sec-light);
@@ -252,6 +255,14 @@ th {
 .hidden a {
     padding: 0.7em 1em;
     color: var(--pri-dark);
+}
+
+p a {
+    color: var(--pri-dark);
+}
+
+p a:hover {
+    color: var(--pri-med);
 }
 
 /* Responsive adjustments */
