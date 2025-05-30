@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>心理健康互動表單 | 銀髮族健康與運動指南</title>
+  <link rel="stylesheet" href="../lib/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <img src="../banner.jpg" alt="橫幅" id="main-banner-img">
+        <a href="../index.html"><h1>銀髮族健康與運動指南</h1></a>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-diet">飲食 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-diet">
+                    <li><a href="#">每日營養</a></li>
+                    <li><a href="#">建議飲食</a></li>
+                    <li><a href="#">菜餚食譜</a></li>
+                    <li><a href="#">餐廳地圖</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-exercise">運動 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-exercise">
+                    <li><a href="../exercise/benefits.html">運動的益處</a></li>
+                    <li><a href="../exercise/walking.html">關於健走</a></li>
+                    <li><a href="../exercise/running.html">關於慢跑</a></li>
+                    <li><a href="../exercise/swimming.html">關於游泳</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-ltc">長照 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-ltc">
+                    <li><a href="../care/caretaker.html">外籍看護申請</a></li>
+                    <li><a href="../care/transfer.html">居家接送服務</a></li>
+                    <li><a href="../care/subsidies.html">長照補助申請</a></li>
+                    <li><a href="../care/daycare.html">日間照顧項目</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-mental">心理 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-mental">
+                    <li><a href="./family.html">與家人的關係</a></li>
+                    <li><a href="./friends.html">與朋友的關係</a></li>
+                    <li><a href="./form.html">心理健康互動表單</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-medical">醫療 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-medical">
+                    <li><a href="#">健保與額外醫療保險</a></li>
+                    <li><a href="#">建議體檢項目</a></li>
+                    <li><a href="#">醫院評價</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="static-section">
+            <h1>老年人心理健康自我評估表</h1>
+            <form id="mentalHealthForm">
+            <div class="label">
+                <label for="name">姓名：</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="label">
+                <label for="mood">您最近一週的心情如何？</label>
+            </div>
+            <div class="radio-group" id="mood">
+                <label>
+                    <input type="radio" name="mood" value="心情很好">
+                    <div class="circle"></div>
+                    <span>心情很好</span>
+                </label>
+                <label>
+                    <input type="radio" name="mood" value="還過得去">
+                    <div class="circle"></div>
+                    <span>還過得去</span>
+                </label>
+                <label>
+                    <input type="radio" name="mood" value="有點沮喪">
+                    <div class="circle"></div>
+                    <span>有點沮喪</span>
+                </label>
+                <label>
+                    <input type="radio" name="mood" value="非常低落">
+                    <div class="circle"></div>
+                    <span>非常低落</span>
+                </label>
+            </div>
+
+            <div class="label">
+                <label for="sleep">您最近的睡眠情況如何？</label>
+            </div>
+            <div class="radio-group" id="sleep">
+                <label>
+                    <input type="radio" name="sleep" value="睡得很好">
+                    <div class="circle"></div>
+                    <span>睡得很好</span>
+                </label>
+                <label>
+                    <input type="radio" name="sleep" value="偶爾失眠">
+                    <div class="circle"></div>
+                    <span>偶爾失眠</span>
+                </label>
+                <label>
+                    <input type="radio" name="sleep" value="常常失眠">
+                    <div class="circle"></div>
+                    <span>常常失眠</span>
+                </label>
+                <label>
+                    <input type="radio" name="sleep" value="幾乎無法入睡">
+                    <div class="circle"></div>
+                    <span>很難入睡</span>
+                </label>
+            </div>
+
+            <div class="label">
+                <label for="support">您覺得身邊的親友有提供您足夠的支持嗎？</label>
+            </div>
+            <div class="radio-group" id="support">
+                <label>
+                    <input type="radio" name="support" value="非常足夠">
+                    <div class="circle"></div>
+                    <span>非常足夠</span>
+                </label>
+                <label>
+                    <input type="radio" name="support" value="還算足夠">
+                    <div class="circle"></div>
+                    <span>還算足夠</span>
+                </label>
+                <label>
+                    <input type="radio" name="support" value="很少支持">
+                    <div class="circle"></div>
+                    <span>很少支持</span>
+                </label>
+                <label>
+                    <input type="radio" name="support" value="幾乎沒有">
+                    <div class="circle"></div>
+                    <span>幾乎沒有</span>
+                </label>
+            </div>
+
+
+            <div class="label">
+                <label for="comments">想分享的其他感受或困擾：</label>
+            </div>
+            <div>
+                <textarea id="comments" name="comments" rows="4" placeholder="請在此輸入..."></textarea>
+            </div>
+
+                <button type="submit">提交評估</button>
+            </form>
+            <p id="result" style="margin-top:20px; color:green; font-weight:bold;"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 銀髮族健康指南 | 本網站資訊僅供參考，不能取代專業建議及官方資訊。</p>
+    </footer>
+    <script src="../lib/script.js"></script>
+
+    <script>
+        document.getElementById('mentalHealthForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            let mood = "_";
+            let sleep = "_";
+            let support = "_";
+            const selectedMood = document.querySelector('input[name="mood"]:checked');
+            if (selectedMood) {
+                mood = selectedMood.value;
+            } else {
+                alert('請選擇您的心情');
+            }
+            const selectedSleep = document.querySelector('input[name="sleep"]:checked');
+            if (selectedSleep) {
+                sleep = selectedSleep.value;
+            } else {
+                alert('請選擇您的睡眠狀況');
+            }
+            const selectedSupport = document.querySelector('input[name="support"]:checked');
+            if (selectedSupport) {
+                support = selectedSupport.value;
+            } else {
+                alert('請選擇您的支持狀況');
+            }
+            const comments = document.getElementById('comments').value;
+            console.log(mood);
+            console.log(sleep);
+            console.log(support);
+
+            let feedback = `感謝您，${name}，您的回饋已收到。\n\n`;
+
+            if (mood === "非常低落" || sleep === "幾乎無法入睡" || support === "幾乎沒有") {
+                feedback += "建議您與專業心理諮商師聯繫，尋求進一步協助。";
+            } else {
+                feedback += "請持續關心自己的身心健康，保持良好的作息與社交活動。";
+            }
+
+            document.getElementById('result').innerText = feedback;
+        });
+    </script>
+</body>
+</html>

@@ -270,6 +270,51 @@ p a:hover {
     color: var(--pri-med);
 }
 
+input, select, textarea {
+    border-radius: 5px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 2rem;
+  justify-content: start;
+  margin-top: 0.5rem;
+}
+
+.radio-group input[type="radio"] {
+  display: none;
+}
+
+.radio-group label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-group .circle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.radio-group input[type="radio"]:checked + .circle::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: var(--pri-med);
+  border-radius: 50%;
+}
+
+.label {
+    margin-top: 1em;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     header h1 {
