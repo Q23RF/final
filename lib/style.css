@@ -262,11 +262,11 @@ th {
     color: var(--pri-dark);
 }
 
-p a {
+p a, li a {
     color: var(--pri-dark);
 }
 
-p a:hover {
+p a:hover, li a:hover {
     color: var(--pri-med);
 }
 
@@ -464,14 +464,7 @@ textarea {
     border: 2px solid var(--highlight1);
 }
 
-.table-container {
-    overflow-x: auto; 
-    margin-top: 1em;
-    margin-bottom: 1em;
-    border: 1px solid var(--highlight1);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
+
 
 
 main button {
@@ -852,14 +845,6 @@ button:hover {
 
 #hospital-reviews ul:not(.evaluation-criteria) li strong {
     color: #A56753; 
-}
-
-.table-container {
-    overflow-x: auto; 
-    margin-bottom: 2rem;
-    border: 1px solid #F1C27D;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .hospital-ranking-table {
