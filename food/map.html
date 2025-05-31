@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>餐廳地圖 | 銀髮族健康與運動指南</title>
+  <link rel="stylesheet" href="../lib/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <img src="../banner.jpg" alt="橫幅" id="main-banner-img">
+        <a href="../index.html"><h1>銀髮族健康與運動指南</h1></a>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-diet">飲食 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-diet">
+                    <li><a href="./nutrition.html">每日營養</a></li>
+                    <li><a href="./suggestions.html">建議飲食</a></li>
+                    <li><a href="./recipe.html">菜餚食譜</a></li>
+                    <li><a href="./map.html">餐廳地圖</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-exercise">運動 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-exercise">
+                    <li><a href="../exercise/benefits.html">運動的益處</a></li>
+                    <li><a href="../exercise/walking.html">關於健走</a></li>
+                    <li><a href="../exercise/running.html">關於慢跑</a></li>
+                    <li><a href="../exercise/swimming.html">關於游泳</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-ltc">長照 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-ltc">
+                    <li><a href="../care/caretaker.html">外籍看護申請</a></li>
+                    <li><a href="../care/transfer.html">居家接送服務</a></li>
+                    <li><a href="../care/subsidies.html">長照補助申請</a></li>
+                    <li><a href="../care/daycare.html">日間照顧項目</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-mental">心理 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-mental">
+                    <li><a href="../mental/family.html">與家人的關係</a></li>
+                    <li><a href="../mental/friends.html">與朋友的關係</a></li>
+                    <li><a href="../mental/form.html">心理健康互動表單</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-medical">醫療 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-medical">
+                    <li><a href="#">健保與額外醫療保險</a></li>
+                    <li><a href="#">建議體檢項目</a></li>
+                    <li><a href="#">醫院評價</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+    <section class="static-section">
+    <h1>餐廳地圖 (嘉義地區)</h1>
+    <p>以下為嘉義地區部分經評選或具健康概念的餐廳列表，提供長者外出用餐時的參考。建議用餐前可先致電確認營業時間及餐點細節，並留意餐廳是否提供符合您健康需求的選擇。</p>
+    
+    <div class="table-container">
+        <table id="restaurant-table">
+            <thead>
+                <tr>
+                    <th>編號</th>
+                    <th>餐廳名稱</th>
+                    <th>類型</th>
+                    <th>平均餐點價格</th>
+                    <th>地址</th>
+                    <th>電話</th>
+                    <th>餐飲衛生評價</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>葫蘆蘋果貓大齡食堂</td>
+                    <td>中式餐飲</td>
+                    <td>NT$100–150</td>
+                    <td>嘉義市東區東義路22號</td>
+                    <td>05-2768969</td>
+                    <td>金質優</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>樂食沛 Recipchen</td>
+                    <td>異國美食</td>
+                    <td>NT$200–300</td>
+                    <td>嘉義市西區國華街62-15號</td>
+                    <td>05-2163636</td>
+                    <td>金質優</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>大食館異國石鍋料理專賣店</td>
+                    <td>異國美食</td>
+                    <td>NT$250–350</td>
+                    <td>嘉義市西區玉山路13號</td>
+                    <td>05-2762425</td>
+                    <td>金質優</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>新明津創意美食餐飲</td>
+                    <td>中式餐飲</td>
+                    <td>NT$200–300</td>
+                    <td>嘉義市西區仁愛路382號</td>
+                    <td>05-2255668</td>
+                    <td>優</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>森林中的猫</td>
+                    <td>中式餐飲</td>
+                    <td>NT$150–250</td>
+                    <td>嘉義市西區永和街73號</td>
+                    <td></td>
+                    <td>優</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>狀元王虱目魚專門店</td>
+                    <td>中式餐飲</td>
+                    <td>NT$120–200</td>
+                    <td>嘉義市西區博愛路一段347號</td>
+                    <td>05-2910809</td>
+                    <td>優</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>蕭老師火雞肉飯店</td>
+                    <td>中式餐飲</td>
+                    <td>NT$80–120</td>
+                    <td>嘉義市西區自由路101號</td>
+                    <td>05-2326836</td>
+                    <td>優</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>簡單火雞肉飯</td>
+                    <td>中式餐飲</td>
+                    <td>NT$80–120</td>
+                    <td>嘉義市東區大雅路二段581號</td>
+                    <td>05-2754563</td>
+                    <td>優</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>心宜草堂</td>
+                    <td>中式餐飲</td>
+                    <td>NT$150–250</td>
+                    <td>嘉義市西區民國路159號</td>
+                    <td>05-2771996</td>
+                    <td>優</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>米樂手作料理店</td>
+                    <td>日式餐飲</td>
+                    <td>NT$200–300</td>
+                    <td>嘉義市西區保安一路139號</td>
+                    <td>05-2312699</td>
+                    <td>優</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>嘉義頂軒火雞肉飯</td>
+                    <td>中式餐飲</td>
+                    <td>NT$80–120</td>
+                    <td>嘉義市東區公明路265號</td>
+                    <td>05-2292555</td>
+                    <td>良</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>蔬盈市場火鍋</td>
+                    <td>暖暖鍋物</td>
+                    <td>NT$250–350</td>
+                    <td>嘉義市西區民生北路43號</td>
+                    <td>05-2166555</td>
+                    <td>良</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p><strong>外出用餐小貼士：</strong></p>
+    <ul>
+        <li>主動要求少油、少鹽、少醬料。</li>
+        <li>選擇蒸、煮、烤、滷等烹調方式，避免油炸。</li>
+        <li>多點蔬菜，確保膳食纖維攝取。</li>
+        <li>注意份量，避免過量進食。</li>
+        <li>詢問是否有提供長者友善餐點或客製化調整。</li>
+    </ul>
+    </section>
+
+    </main>
+  <footer>
+    <p>&copy; 2025 銀髮族健康指南 | 本網站資訊僅供參考，不能取代專業建議及官方資訊。</p>
+</footer>
+<script src="../lib/script.js"></script>
+</body>
+</html>
