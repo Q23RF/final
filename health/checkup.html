@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>建議體檢項目 | 銀髮族健康與運動指南</title>
+  <link rel="stylesheet" href="../lib/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <img src="../banner.jpg" alt="橫幅" id="main-banner-img">
+        <a href="../index.html"><h1>銀髮族健康與運動指南</h1></a>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-diet">飲食 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-diet">
+                    <li><a href="../food/nutrition.html">每日營養</a></li>
+                    <li><a href="../food/suggestions.html">建議飲食</a></li>
+                    <li><a href="../food/recipe.html">菜餚食譜</a></li>
+                    <li><a href="../food/map.html">餐廳地圖</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-exercise">運動 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-exercise">
+                    <li><a href="../exercise/benefits.html">運動的益處</a></li>
+                    <li><a href="../exercise/walking.html">關於健走</a></li>
+                    <li><a href="../exercise/running.html">關於慢跑</a></li>
+                    <li><a href="../exercise/swimming.html">關於游泳</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-ltc">長照 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-ltc">
+                    <li><a href="../care/caretaker.html">外籍看護申請</a></li>
+                    <li><a href="../care/transfer.html">居家接送服務</a></li>
+                    <li><a href="../care/subsidies.html">長照補助申請</a></li>
+                    <li><a href="../care/daycare.html">日間照顧項目</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-mental">心理 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-mental">
+                    <li><a href="../mental/family.html">與家人的關係</a></li>
+                    <li><a href="../mental/friends.html">與朋友的關係</a></li>
+                    <li><a href="../mental/form.html">心理健康互動表單</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="nav-item-button" aria-expanded="false" aria-controls="submenu-medical">醫療 <span class="nav-toggle-icon">+</span></button>
+                <ul class="submenu" id="submenu-medical">
+                    <li><a href="./insurance.html">健保與額外醫療保險</a></li>
+                    <li><a href="./checkup.html">建議體檢項目</a></li>
+                    <li><a href="./evaluate.html">醫院評價</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="bmi-calculator" class="checkup-section">
+            <h2>BMI 計算機</h2>
+            <div class="input-group">
+                <label for="weight">體重 (公斤):</label>
+                <input type="number" id="weight" placeholder="例如：70">
+            </div>
+            <div class="input-group">
+                <label for="height">身高 (公分):</label>
+                <input type="number" id="height" placeholder="例如：175">
+            </div>
+            <button id="calculate-bmi-btn">計算 BMI</button>
+            <p id="bmi-result"></p>
+        </section>
+
+        <section id="health-advisor" class="checkup-section">
+            <h2>健康風險評估</h2>
+            <p>根據您的基本資料，提供可能的健康風險、建議就醫科別與相關保險資訊。<br><strong>（本資訊僅供參考，不能取代專業醫療建議）</strong></p>
+            <div class="advisor-form">
+                <div class="input-group">
+                    <label for="advisor-age">年齡:</label>
+                    <input type="number" id="advisor-age" placeholder="例如：65" min="60" max="120">
+                </div>
+                <div class="input-group">
+                    <label for="advisor-gender">生理性別:</label>
+                    <select id="advisor-gender">
+                        <option value="">請選擇</option>
+                        <option value="male">男性</option>
+                        <option value="female">女性</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="advisor-weight">體重 (公斤):</label>
+                    <input type="number" id="advisor-weight" placeholder="例如：70">
+                </div>
+                <div class="input-group">
+                    <label for="advisor-height">身高 (公分):</label>
+                    <input type="number" id="advisor-height" placeholder="例如：175">
+                </div>
+                <button id="get-advice-btn">獲取評估建議</button>
+            </div>
+            <div id="advice-result">
+                <!-- Advice will be displayed here -->
+            </div>
+        </section>
+        <section class="checkup-section" id="health-checkups">
+            <h2>建議體檢項目</h2>
+            <p>對於65歲及以上的長者，定期健康檢查對於早期發現潛在健康問題、維持生活品質至關重要。以下為針對此年齡層的建議體檢項目，實際檢查項目與頻率應與您的醫師詳細討論，並考量個人健康狀況、家族病史及生活習慣等因素：</p>
+            
+            <div class="checkup-categories">
+                <div class="checkup-category">
+                    <h4>基礎檢查 (建議每年或依醫囑)</h4>
+                    <ul>
+                        <li>一般理學檢查 (身高、體重、腰圍、血壓、視力、聽力等)</li>
+                        <li>血液常規檢查 (如血紅素、白血球、血小板等)</li>
+                        <li>尿液常規檢查</li>
+                        <li>肝功能檢查 (GOT, GPT)</li>
+                        <li>腎功能檢查 (BUN, Creatinine)</li>
+                        <li>空腹血糖檢查</li>
+                        <li>血脂肪檢查 (總膽固醇、三酸甘油酯、高低密度脂蛋白膽固醇)</li>
+                    </ul>
+                </div>
+                <div class="checkup-category">
+                    <h4>重點癌症篩檢 (依國健署指引及醫師建議)</h4>
+                    <ul>
+                        <li><strong>大腸癌篩檢：</strong> 50-74歲民眾，建議每2年1次糞便潛血檢查。</li>
+                        <li><strong>肺癌篩檢：</strong> (高風險族群，如長年吸菸者或有家族史之長者，建議諮詢醫師) 可與醫師討論低劑量電腦斷層掃描(LDCT)的必要性。</li>
+                    </ul>
+                </div>
+                <div class="checkup-category">
+                    <h4>其他建議檢查 (依個別狀況建議)</h4>
+                    <ul>
+                        <li>牙齒檢查與洗牙 (建議每半年至一年)</li>
+                        <li>骨質密度檢查 (如65歲以上、有骨質疏鬆風險者)</li>
+                        <li>腹部超音</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="checkup-section" id="health-checkup-process">
+            <h2>健康檢查流程指南 (60歲以上適用)</h2>
+            <p>了解成人預防保健服務（長者健檢）的預約、當天流程及後續追蹤，幫助您順利完成健康檢查。</p>
+
+            <div class="process-part">
+                <h3> 1. 預約與準備</h3>
+                <table class="checkup-process-table">
+                    <thead>
+                        <tr>
+                            <th>步驟</th>
+                            <th>說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>查詢可檢查機構</td>
+                            <td>可至<a href="https://www.hpa.gov.tw/Pages/List.aspx?nodeid=126" target="_blank" rel="noopener noreferrer">衛福部國民健康署網站</a>查詢，或撥打 1999 市民專線詢問所在縣市提供免費成人健檢的醫院/診所。</td>
+                        </tr>
+                        <tr>
+                            <td>預約檢查</td>
+                            <td>可透過網路、電話或親至醫療院所現場預約。建議提早1～2週預約，以確保能安排到合適的時間。</td>
+                        </tr>
+                        <tr>
+                            <td>檢查前注意事項</td>
+                            <td>
+                                <ul>
+                                    <li><strong>禁食：</strong> 檢查前一晚10點後請勿進食及飲水（部分檢查如空腹血糖、血膽固醇等需要空腹8小時以上，以確保檢驗數值的準確性）。</li>
+                                    <li><strong>攜帶物品：</strong> 請務必攜帶健保卡、身分證。建議穿著寬鬆舒適的衣物，方便檢查。</li>
+                                    <li><strong>慢性病患者：</strong> 若您有慢性病史並規律服藥（如高血壓、糖尿病），請攜帶近半年的藥單或相關檢驗報告，供醫師參考。檢查當日早上是否服用常規藥物，請依照醫師指示。</li>
+                                    <li><strong>其他：</strong> 建議攜帶口罩。</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="process-part">
+                <h3> 2. 當天檢查流程（約需30分鐘～1.5小時）</h3>
+                <table class="checkup-process-table">
+                    <thead>
+                        <tr>
+                            <th>檢查順序</th>
+                            <th>項目與說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>報到與基本資料確認</td>
+                            <td>至櫃檯報到，核對身份，並填寫「成人預防保健服務檢查表」及「健康行為調查問卷」（內容可能包含個人生活習慣、疾病史、家族病史、跌倒風險評估等）。</td>
+                        </tr>
+                        <tr>
+                            <td>身體基本檢查</td>
+                            <td>測量身高、體重、計算身體質量指數(BMI)、腰圍、血壓。視力、聽力及口腔檢查等。</td>
+                        </tr>
+                        <tr>
+                            <td>抽血、驗尿</td>
+                            <td>進行血液及尿液檢體採集。檢驗項目主要包括：
+                                <ul>
+                                    <li>血液生化檢查：空腹血糖、總膽固醇、三酸甘油酯、高密度脂蛋白膽固醇、低密度脂蛋白膽固醇計算、肝功能 (AST/GOT, ALT/GPT)、腎功能 (肌酸酐、腎絲球過濾率計算)。</li>
+                                    <li>血液常規檢查：血球計數等。</li>
+                                    <li>尿液常規檢查：尿蛋白等。</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>其他附加檢查（視醫院及方案而定）</td>
+                            <td>部分醫療院所可能依情況提供額外檢查，例如：心電圖、胸部X光檢查、骨質密度檢查、糞便潛血檢查（配合國健署大腸癌篩檢政策）。</td>
+                        </tr>
+                        <tr>
+                            <td>醫師問診與健康諮詢</td>
+                            <td>由醫師進行理學檢查、評估整體健康狀況、解釋初步檢查結果（部分檢驗結果可能需時較長），並根據問卷及檢查結果提供個人化的健康建議、飲食與運動指導。若發現異常，醫師會建議進一步檢查或開立轉診單至相關專科。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="process-part">
+                <h3> 3. 報告與後續追蹤</h3>
+                <table class="checkup-process-table">
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>報告領取/查詢</td>
+                            <td>完整的健康檢查報告通常約需1～2週完成。您可以選擇回診由醫師親自解釋報告，或部分醫院提供線上查詢服務（例如透過「健保快易通」App查詢部分檢驗結果）。領取方式請依各醫療院所規定。</td>
+                        </tr>
+                        <tr>
+                            <td>異常追蹤與管理</td>
+                            <td>若檢查結果發現異常（如高血糖、高血脂、高血壓等三高問題，或其他潛在疾病風險），請務必遵從醫師建議，安排至相關專科門診進行進一步的診斷、追蹤與治療。早期發現、早期治療是維持健康的關鍵。</td>
+                        </tr>
+                        <tr>
+                            <td>建議回診頻率</td>
+                            <td>
+                                <ul>
+                                    <li><strong>一般情況：</strong> 若檢查結果無重大異常，建議依國健署指引，每年或每2-3年定期接受成人預防保健服務（視年齡而定，65歲以上每年一次）。</li>
+                                    <li><strong>慢性病患者：</strong> 若您本身患有慢性疾病，應配合醫師指示，可能需要每1至3個月定期回診追蹤病情變化及調整治療方案。</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="disclaimer"><strong>請注意：</strong> 上述流程與項目為一般性參考，實際執行細節可能因各醫療院所的規定與提供的服務內容而略有差異。建議您在預約時向醫療院所確認相關資訊。</p>
+        </section>
+    </main>
+    <footer>
+    <p>&copy; 2025 銀髮族健康指南 | 本網站資訊僅供參考，不能取代專業建議及官方資訊。</p>
+    </footer>
+<script src="../lib/script.js"></script>
+</body>
+</html>
